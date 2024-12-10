@@ -1,0 +1,198 @@
+/* General styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f4f4f9;
+  background-image: linear-gradient(to right, #dcdcdc 1px, transparent 1px), 
+                    linear-gradient(to bottom, #dcdcdc 1px, transparent 1px);
+  background-size: 20px 20px; /* Grid size */
+  background-position: 0 0, 0 0;
+  margin-top: 3%;
+}
+
+.content {
+  text-align: center;
+  color: black;
+  max-width: 800px;
+  width: 100%;
+  z-index: 1;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  color: black;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+  margin: 10px;
+}
+
+#generateArray:hover,
+#applyUserArray:hover,
+#startHeapSort:hover,
+#extractBtn:hover,
+#clearBtn:hover {
+  background-color: #2196F3; /* Blue color on hover */
+  transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+/* Canvases Container */
+.canvases-container {
+  display: flex;
+  justify-content: space-between; /* Places canvases side by side */
+  gap: 20px; /* Optional: space between canvases */
+  margin-top: 20px; /* Optional: space above the container */
+  flex-wrap: wrap; /* Allow wrapping of canvases if the space is small */
+  width: 100%; /* Ensure the container takes full width */
+}
+
+.canvas-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 48%; /* Adjust width of each canvas */
+}
+
+.canvas-label {
+  font-size: 18px;
+  font-weight: bold;
+  color: #48CAE4; /* Optional: match your theme color */
+  margin-bottom: 10px; /* Space between label and canvas */
+  text-align: center;
+}
+
+canvas {
+  width: 90%;
+  height: auto;
+  border: 1px solid #333;
+}
+
+/* Log messages container */
+#logMessages {
+  margin-top: 30px;
+  max-height: 200px;
+  width: 50%;
+  overflow-y: auto;
+  background-color: rgba(253, 253, 253, 0.911);
+  margin-left: auto; /* Center horizontally */
+  margin-right: auto; /* Center horizontally */
+  border: 2px solid #48CAE4; /* Optional: Add border to match theme */
+  border-radius: 5px; /* Optional: Add rounded corners */
+  padding: 10px; /* Optional: Add padding inside the div */
+  font-size: 14px; /* Optional: Set font size */
+  font-family: Arial, sans-serif; /* Optional: Set font family */
+}
+
+/* Container for input and sorted array */
+#inputArray, #sortedArray {
+  font-weight: bold;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  color: #333;
+  margin: 10px 0;
+  padding: 10px;
+  border: 2px solid #48CAE4; /* Border color */
+  border-radius: 5px;
+  background-color: #f0f8ff; /* Light blue background */
+  text-align: center; /* Center the text */
+  width: 300px; /* Set a fixed width */
+  box-sizing: border-box; /* Ensure padding is inside the width */
+  display: flex;
+  justify-content: center; /* Horizontally center content */
+  align-items: center; /* Vertically center content */
+  margin-left: auto; /* Center horizontally in the container */
+  margin-right: auto; /* Center horizontally in the container */
+}
+
+#inputArray {
+  background-color: #90E0EF; /* Light blue */
+}
+
+#sortedArray {
+  background-color: #ADE8F4; /* Even lighter blue */
+}
+
+#inputArray {
+  border-color: #48CAE4;
+}
+
+#sortedArray {
+  border-color: #90E0EF;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  /* Stack the canvases vertically on small screens */
+  .canvases-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .canvas-wrapper {
+    width: 90%; /* Take full width on small screens */
+    margin-bottom: 20px; /* Add space between canvases */
+  }
+
+  /* Adjust font size for canvas labels */
+  .canvas-label {
+    font-size: 16px; /* Make the font smaller on mobile devices */
+  }
+
+  /* Adjust input and sorted array containers for small screens */
+  #inputArray, #sortedArray {
+    width: 80%; /* Allow containers to expand on small screens */
+    font-size: 14px; /* Smaller font size */
+  }
+
+  /* Adjust the log messages container for small screens */
+  #logMessages {
+    width: 80%; /* Make the log messages container wider */
+    font-size: 12px; /* Smaller font size */
+  }
+
+  /* Adjust button sizes */
+  button {
+    padding: 8px 16px;
+    font-size: 14px; /* Smaller button size */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Further adjustments for very small screens */
+  .canvas-label {
+    font-size: 14px; /* Reduce font size further */
+  }
+
+  #inputArray, #sortedArray {
+    width: 100%; /* Allow full-width input and sorted arrays */
+    font-size: 12px; /* Smaller font size */
+  }
+
+  #logMessages {
+    width: 100%; /* Full width for log messages */
+    font-size: 10px; /* Smaller font size */
+  }
+
+  button {
+    padding: 6px 12px; /* Smaller button size */
+    font-size: 12px; /* Smaller button font size */
+  }
+}

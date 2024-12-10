@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduSite</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header>
+    <!-- Navbar - Fixed to top with shadow -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-navbar">
+      <div class="container-fluid d-flex justify-content-between align-items-center">
+        <!-- Center the logo using flex -->
+        <div class="navbar-brand mx-auto">
+          <a href="index.html" ><img src="images/logo.png" alt="EduSite Logo" class="logo"></a>
+        </div>
+
+        <!-- Navbar items aligned to the right -->
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ms-auto">
+                <li><a href="index.html" class="home">Home</a></li>
+                <li><a href="#" class="about" data-bs-toggle="modal" data-bs-target="#aboutModal">About</a></li>
+            <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="sortingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Visualization
+                    </a>
+                <ul class="dropdown-menu" aria-labelledby="sortingDropdown">
+                    <li><a class="dropdown-item" href="vselect.html">Selection Sort</a></li>
+                    <li><a class="dropdown-item" href="vheap.html">Heap Sort</a></li>
+                </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="content">
+        <div class="modal fade" id="aboutModal" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="aboutModalLabel">About EduSite</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <p>
+                        <strong>ALPHA</strong> is a platform dedicated to simplifying complex concepts in algorithms and data structures through visualization. 
+                        Our mission is to make learning intuitive and engaging, especially for students and educators.
+                      </p>
+                      <p>
+                        With a focus on user-friendly design and interactive elements, <strong>ALPHA</strong> ensures that fundamental topics are accessible to everyone.
+                      </p>
+                      <p>
+                           Devloped by :
+                           <ul>
+                               <li>Gawali Om R</li>
+                               <li>Tile Harshad </li>
+                           </ul>
+                    </p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        <section class="info-section" id="overview">
+            <h2>Selection Sort Overview</h2>
+            <p>
+                Selection Sort is a comparison-based sorting algorithm. It sorts an array by repeatedly selecting the smallest (or largest) element from the unsorted portion and swapping it with the first unsorted element. This process continues until the entire array is sorted.
+            </p>
+            <h3>How it Works:</h3>
+            <p>
+                First, the smallest element is found and swapped with the first element. This ensures the smallest element is at its correct position. The process is repeated for the second smallest element and so on, until the entire array is sorted.
+            </p>
+        </section>
+    
+        <section class="algorithm-types" id="code">
+            <h2>Selection Sort Algorithm</h2>
+            <div class="code-container">
+                <pre id="algorithm-code">
+                    <code>
+    // C++ program to implement Selection Sort
+    #include <bits/stdc++.h>
+    using namespace std;
+    
+    void selectionSort(vector<int> &arr) {
+        int n = arr.size();
+    
+        for (int i = 0; i < n - 1; ++i) {
+            // Assume the current position holds
+            // the minimum element
+            int min_idx = i;
+    
+            // Iterate through the unsorted portion
+            // to find the actual minimum
+            for (int j = i + 1; j < n; ++j) {
+                if (arr[j] < arr[min_idx]) {
+                    // Update min_idx if a smaller
+                    // element is found
+                    min_idx = j;
+                }
+            }
+    
+            // Move minimum element to its
+            // correct position
+            swap(arr[i], arr[min_idx]);
+        }
+    }
+    
+    void printArray(vector<int> &arr) {
+        for (int &val : arr) {
+            cout << val << " ";
+        }
+        cout << endl;
+    }
+    
+    int main() {
+        vector<int> arr = {64, 25, 12, 22, 11};
+    
+        cout << "Original array: ";
+        printArray(arr); 
+    
+        selectionSort(arr);
+    
+        cout << "Sorted array: ";
+        printArray(arr);
+    
+        return 0;
+    }
+                    </code>
+                </pre>
+                <button class="copy-btn" onclick="copyCode()">Copy Code</button>
+            </div>
+        </section>
+    
+        <section class="info-section" id="complexity-analysis">
+            <h2>Complexity Analysis of Selection Sort</h2>
+            <p><strong>Time Complexity:</strong> O(n<sup>2</sup>)</p>
+            <ul>
+                <li>One loop to select an element of the array one by one: O(n).</li>
+                <li>Another loop to compare the selected element with every other array element: O(n).</li>
+                <li>Total Complexity = O(n) * O(n) = O(n<sup>2</sup>).</li>
+            </ul>
+            <p><strong>Auxiliary Space:</strong> O(1) (in-place sorting).</p>
+        </section>
+    
+        <section class="info-section" id="advantages">
+            <h2>Advantages of Selection Sort</h2>
+            <ul>
+                <li>Simple and easy to understand, making it ideal for teaching sorting concepts.</li>
+                <li>Requires only constant O(1) extra memory space.</li>
+                <li>Fewer memory writes compared to other algorithms, which is beneficial in scenarios where write operations are costly.</li>
+            </ul>
+        </section>
+    
+        <section class="info-section" id="disadvantages">
+            <h2>Disadvantages of Selection Sort</h2>
+            <ul>
+                <li>Has a time complexity of O(n<sup>2</sup>), making it slower than algorithms like Quick Sort or Merge Sort.</li>
+                <li>Not stable, meaning it does not maintain the relative order of equal elements.</li>
+            </ul>
+        </section>
+    
+        <section class="info-section" id="applications">
+            <h2>Applications of Selection Sort</h2>
+            <ul>
+                <li>Useful for teaching fundamental sorting mechanisms and algorithm design.</li>
+                <li>Suitable for small lists where the overhead of more complex algorithms isn’t justified.</li>
+                <li>Ideal for systems with limited memory due to its in-place sorting capability.</li>
+                <li>Used in simple embedded systems where simplicity and resource constraints are key factors.</li>
+            </ul>
+        </section>
+    
+        <section id="video">
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/g-PGLbMth_g?si=-HPG39xq0X4kgCAE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+    </main>
+    
+
+
+<!-- Sidebar (Left side) -->
+<div id="sidebar" class="sidebar">
+       
+      
+        <div class="sidebar-content">
+          <ul class="sidebar-nav">
+                <li class="menu-item"><a href="#overview">Overview</a></li>
+                <li class="menu-item"><a href="#code"> Code</a></li>
+                <li class="menu-item"><a href="#complexity-analysis">Complexity Analysis</a></li>
+                <li class="menu-item"><a href="#advantages">Advantages</a></li>
+                <li class="menu-item"><a href="#disadvantages">Disadvantages</a></li>
+                <li class="menu-item"><a href="#applications">Applications</a></li>
+                <li><a href="#video">Learn</a></li>
+                <li class="menu-item"><a href="vselect.html">Visualization</a></li>
+            <hr>
+            <li><b>Learn More
+                <li><a href="selection.html">Selection Sort</a></li>
+                <li><a href="heap.html">Heap Sort</a></li>
+            </li>
+          </ul>
+        </div>
+      <hr>
+        <!-- Social Media and College Logos at the bottom -->
+        <div class="sidebar-logos">
+            <hr>
+          <a href="#" class="logo-link">
+            <img src="images/instagram-logo.png" alt="Instagram" class="logo-img">
+          </a>
+          <a href="#" class="logo-link">
+            <img src="images/youtube-logo.png" alt="YouTube" class="logo-img">
+          </a>
+          <a href="#" class="logo-link">
+            <img src="images/college-logo.png" alt="College" class="logo-img">
+          </a>
+        </div>
+      </div>
+      
+  
+
+
+    <footer>
+        <p>&copy; 2024 FERGUSSON EDUCATION SOCIETY</p>
+    </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script/script.js"></script>
+</body>
+</html>

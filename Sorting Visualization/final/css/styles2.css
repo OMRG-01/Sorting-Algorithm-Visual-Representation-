@@ -1,0 +1,227 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f4f4f9;
+  background-image: linear-gradient(to right, #dcdcdc 1px, transparent 1px), 
+                    linear-gradient(to bottom, #dcdcdc 1px, transparent 1px);
+  background-size: 20px 20px; /* Grid size */
+  background-position: 0 0, 0 0;
+}
+  
+  .container {
+    margin: 20px auto;
+    max-width: 800px;
+  }
+  
+  .controls {
+    margin: 20px 0;
+  }
+  .controls button, .controls input 
+  {
+    margin: 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .controls input {
+    margin: 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #customArrayInput {
+    width: 300px;
+  }
+  .visualizer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    position: relative;
+    z-index: 1; /* Ensure the visualizer stays on top of the grid */
+  }
+  
+  
+  .box {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: white;
+    border: 2px solid black;
+    font-size: 16px;
+    color: black;
+    transition: background-color 0.5s;
+  }
+  #historyContent {
+    background-color: white; /* Ensure history content is readable */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    position: relative;
+    z-index: 2; /* Ensure history content stays on top of the grid */
+  }
+
+  #history {
+    margin: 20px auto;
+    text-align: left;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .green {
+    background-color:rgb(202, 155, 233);
+  }
+  
+  .sky-blue {
+    background-color: green;
+  }
+  
+  .purple {
+    background-color: skyblue;
+  }
+  
+  .faint-purple {
+    background-color: #d8bfd8;
+  }
+  /* Button and input styling */
+#randomArrayBtn,
+#selectionSortBtn,
+#historyBtn {
+  margin: 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+  border:solid;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Hover and active state for randomArrayBtn */
+
+#generateArray:hover {
+  background-color: #2196F3; /* Blue color on hover */
+  
+  transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+#randomArrayBtn:active {
+  transform: scale(1); /* Return to original size when clicked */
+}
+
+/* Hover and active state for selectionSortBtn */
+#selectionSortBtn:hover {
+  background-color: #2196F3; /* Blue color on hover */
+  
+  transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+#selectionSortBtn:active {
+  transform: scale(1); /* Return to original size when clicked */
+}
+
+/* Hover and active state for historyBtn */
+#historyBtn:hover {
+  background-color: #2196F3; /* Blue color on hover */
+  transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+#historyBtn:active {
+  transform: scale(1); /* Return to original size when clicked */
+}
+
+/* Custom Array Input Styling */
+#customArrayInput {
+  width: 300px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s;
+}
+
+#customArrayInput:focus {
+  border-color: #4CAF50; /* Green border when focused */
+}
+#iterationDetails {
+  margin-top: 30px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  text-align: left;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+#iterationDetails div {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #fafafa;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+#iterationDetails div:hover {
+  background-color: #e0f7fa; /* Light blue on hover */
+}
+
+#iterationDetails .swap {
+  font-weight: bold;
+  color: #d32f2f; /* Red color for swap details */
+}
+
+#iterationDetails .iterationText {
+  color: #333;
+}
+
+#iterationDetails .iterationNumber {
+  font-weight: bold;
+  color: #1976d2; /* Blue for iteration number */
+}
+.domsec {
+  background-color: #e78c8c;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+/* Styling for the arrayType section */
+#arrayType {
+  background-color: #f0f8ff;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  border-radius: 5px;
+  border-left: 5px solid /* Blue left border for emphasis */
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Styling for the Selected Algorithm info */
+#selectedAlgorithm {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  padding: 10px;
+  background-color: #e6f7ff;
+  border: 1px solid #48CAE4;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 20px;
+}

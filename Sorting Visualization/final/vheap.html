@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heap Sort Visualization</title>
+    <link rel="stylesheet" href="css/styles3.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Heap Sort Visualization</h1>
+        <div>
+            <input type="text" id="userInput" placeholder="Enter numbers separated by commas (e.g., 5, 3, 8, 1)">
+            <button id="applyUserArray">Apply Array</button>
+        </div>
+        <div>
+            <button id="generateArray">Generate Random Array</button>
+            <button id="startHeapSort" disabled>Start Heap Sort</button>
+            <button id="extractBtn" disabled>Extract Root</button>
+            <div id="timeInfo"></div>
+
+        </div>
+        <div id="inputArray"></div> 
+        <div id="sortedArray"></div>
+        <button id="clearBtn">Clear</button>
+        <div id="logMessages">
+            <h3>Logs</h3>
+            <ul></ul>
+        </div>
+        <div class="canvases-container">
+            <div class="canvas-wrapper">
+              <div class="canvas-label" id="binaryTreeLabel">Binary Tree Visualization</div>
+              <canvas id="binaryTreeCanvas"></canvas>
+            </div>
+          
+            <div class="canvas-wrapper">
+              <div class="canvas-label" id="heapifyLabel">Max Heap Visualization</div>
+              <canvas id="heapifyCanvas"></canvas>
+            </div>
+          </div>
+          
+    </div>
+
+    <script src="script/script3.js"></script>
+</body>
+</html>

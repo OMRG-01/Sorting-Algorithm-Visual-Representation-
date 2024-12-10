@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduSite</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header>
+    <!-- Navbar - Fixed to top with shadow -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-navbar">
+      <div class="container-fluid d-flex justify-content-between align-items-center">
+        <!-- Center the logo using flex -->
+        <div class="navbar-brand mx-auto">
+          <a href="index.html" ><img src="images/logo.png" alt="EduSite Logo" class="logo"></a>
+        </div>
+
+        <!-- Navbar items aligned to the right -->
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ms-auto">
+                <li><a href="index.html" class="home">Home</a></li>
+                <li><a href="#" class="about" data-bs-toggle="modal" data-bs-target="#aboutModal">About</a></li>
+            <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="sortingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Visualization
+                    </a>
+                <ul class="dropdown-menu" aria-labelledby="sortingDropdown">
+                    <li><a class="dropdown-item" href="vselect.html">Selection Sort</a></li>
+                    <li><a class="dropdown-item" href="vheap.html">Heap Sort</a></li>
+                </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="content">
+        <div class="modal fade" id="aboutModal" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="aboutModalLabel">About EduSite</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <p>
+                        <strong>ALPHA</strong> is a platform dedicated to simplifying complex concepts in algorithms and data structures through visualization. 
+                        Our mission is to make learning intuitive and engaging, especially for students and educators.
+                      </p>
+                      <p>
+                        With a focus on user-friendly design and interactive elements, <strong>ALPHA</strong> ensures that fundamental topics are accessible to everyone.
+                      </p>
+                      <p>
+                           Devloped by :
+                           <ul>
+                               <li>Gawali Om R</li>
+                               <li>Tile Harshad </li>
+                           </ul>
+                    </p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        <section class="info-section" id="overview">
+            <h2>Heap Sort Overview</h2>
+            <p>
+                <strong>Heap sort</strong> is a comparison-based sorting technique based on Binary Heap Data Structure. It can be seen as an optimization over selection sort where we first find the max (or min) element and swap it with the last (or first). We repeat the same process for the remaining elements. In Heap Sort, we use Binary Heap so that we can quickly find and move the max element in O(Log n) instead of O(n) and hence achieve the O(n Log n) time complexity.
+            </p>
+            <h3>Heap Sort Algorithm</h3>
+            <p>
+                First convert the array into a max heap using heapify, Please note that this happens in-place. The array elements are re-arranged to follow heap properties. Then one by one delete the root node of the Max-heap and replace it with the last node and heapify. Repeat this process while size of heap is greater than 1.
+                <ul>
+                    <li>Rearrange array elements so that they form a Max Heap.</li>
+                    <li>Repeat the following steps until the heap contains only one element:</li>
+                        <ol>
+                        <li> the root element of the heap (which is the largest element in current heap) with the last element of the heap.</li>
+                        <li>Remove the last element of the heap (which is now in the correct position). We mainly reduce heap size and do not remove element from the actual array.</li>
+                        <li>Heapify the remaining elements of the heap.</li>
+                        </ol>
+                    <li>Finally we get sorted array.</li>
+                    
+                </ul>
+            </p>
+           <!-- Bootstrap Carousel -->
+<section id="overview">
+        <h2>Step 1 :Treat the Array as a Complete Binary Tree</h2>
+    <img class="image" src="images/heap.jpeg" alt="what is algoithm">
+    <h2>Step 2 : Build a Max Heap</h2>
+   <!-- First Carousel (1.jpeg to 7.jpeg) -->
+<div id="carouselExample1" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/1.jpeg" class="d-block w-100 image" alt="Image 1">
+            </div>
+            <div class="carousel-item">
+                <img src="images/2.jpeg" class="d-block w-100 image" alt="Image 2">
+            </div>
+            <div class="carousel-item">
+                <img src="images/3.jpeg" class="d-block w-100 image" alt="Image 3">
+            </div>
+            <div class="carousel-item">
+                <img src="images/4.jpeg" class="d-block w-100 image" alt="Image 4">
+            </div>
+            <div class="carousel-item">
+                <img src="images/5.jpeg" class="d-block w-100 image" alt="Image 5">
+            </div>
+            <div class="carousel-item">
+                <img src="images/6.jpeg" class="d-block w-100 image" alt="Image 6">
+            </div>
+            <div class="carousel-item">
+                <img src="images/7.jpeg" class="d-block w-100 image" alt="Image 7">
+            </div>
+        </div>
+    
+        <!-- Arrow Buttons for Next and Previous (First Carousel) -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample1" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample1" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</section>
+<section id="overview">
+    <h2>Step 3 : Sort the array by placing largest element at end of unsorted array.</h2>
+    <!-- Second Carousel (r1.jpeg to r7.jpeg) -->
+<div id="carouselExample2" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/r1.jpeg" class="d-block w-100 image" alt="Image r1">
+            </div>
+            <div class="carousel-item">
+                <img src="images/r2.jpeg" class="d-block w-100 image" alt="Image r2">
+            </div>
+            <div class="carousel-item">
+                <img src="images/r3.jpeg" class="d-block w-100 image" alt="Image r3">
+            </div>
+            <div class="carousel-item">
+                <img src="images/r4.jpeg" class="d-block w-100 image" alt="Image r4">
+            </div>
+            <div class="carousel-item">
+                <img src="images/r5.jpeg" class="d-block w-100 image" alt="Image r5">
+            </div>
+            <div class="carousel-item">
+                <img src="images/r6.jpeg" class="d-block w-100 image" alt="Image r6">
+            </div>
+           
+        </div>
+    
+        <!-- Arrow Buttons for Next and Previous (Second Carousel) -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample2" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample2" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+        
+</section>
+            
+            
+            
+        </section>
+
+    
+        <section class="algorithm-types" id="code">
+            <h2>Selection Sort Algorithm</h2>
+            <div class="code-container">
+                <pre id="algorithm-code">
+                    <code>
+        #include <stdio.h>
+
+                                            // To heapify a subtree rooted with node i
+                                            // which is an index in arr[].
+        void heapify(int arr[], int n, int i) 
+        {
+
+                                            // Initialize largest as root
+        int largest = i; 
+
+                                            // left index = 2*i + 1
+        int l = 2 * i + 1; 
+
+                                            // right index = 2*i + 2
+        int r = 2 * i + 2;
+
+                                            // If left child is larger than root
+        if (l < n && arr[l] > arr[largest]) 
+        {
+            largest = l;
+        }
+
+                                            // If right child is larger than largest so far
+        if (r < n && arr[r] > arr[largest]) 
+        {
+            largest = r;
+        }
+
+                                            // If largest is not root
+        if (largest != i) 
+        {
+            int temp = arr[i];
+            arr[i] = arr[largest];
+            arr[largest] = temp;
+
+                                            // Recursively heapify the affected sub-tree
+            heapify(arr, n, largest);
+        }
+        }
+
+                                            // Main function to do heap sort
+        void heapSort(int arr[], int n) 
+        {
+
+                                            // Build heap (rearrange array)
+            for (int i = n / 2 - 1; i >= 0; i--) 
+            {
+                heapify(arr, n, i);
+            }
+
+                                            // One by one extract an element from heap
+            for (int i = n - 1; i > 0; i--) 
+            {
+                                            // Move current root to end
+                int temp = arr[0]; 
+                arr[0] = arr[i];
+                arr[i] = temp;
+
+                                            // Call max heapify on the reduced heap
+                heapify(arr, i, 0);
+            }
+        }
+
+                                            // A utility function to print array of size n
+        void printArray(int arr[], int n) 
+        {
+            for (int i = 0; i < n; i++) 
+            {
+                printf("%d ", arr[i]);
+            }
+        printf("\n");
+        }
+
+                                            // Driver's code
+        int main() 
+        {
+            int arr[] = {9, 4, 3, 8, 10, 2, 5}; 
+            int n = sizeof(arr) / sizeof(arr[0]);
+
+            heapSort(arr, n);
+
+            printf("Sorted array is \n");
+            printArray(arr, n);
+            return 0;
+        }
+                    </code>
+                </pre>
+                <button class="copy-btn" onclick="copyCode()">Copy Code</button>
+            </div>
+        </section>
+    
+        <section class="info-section" id="complexity-analysis">
+            <h2>Complexity Analysis of Heap Sort</h2>
+            <p><strong>Time Complexity:</strong> O(n log n)</p>
+            <p><strong>Auxiliary Space:</strong> O(log n), due to the recursive call stack. However, auxiliary space can be O(1) for iterative implementation.</p>
+        </section>
+    
+        <section class="info-section" id="imp">
+            <h2>Important points about Heap Sort</h2>
+            <ul>
+                <li>Heap sort is an in-place algorithm..</li>
+                <li>Its typical implementation is not stable but can be made stable</li>
+                <li>Typically 2-3 times slower than well-implemented QuickSort. The reason for slowness is a lack of locality of reference.</li>
+            </ul>
+        </section>
+
+        <section class="info-section" id="advantages">
+            <h2>Advantages of Selection Sort</h2>
+            <ul>
+                <li>Efficient Time Complexity: Heap Sort has a time complexity of O(n log n) in all cases. This makes it efficient for sorting large datasets. The log n factor comes from the height of the binary heap, and it ensures that the algorithm maintains good performance even with a large number of elements.</li>
+                <li>Memory Usage: Memory usage can be minimal (by writing an iterative heapify() instead of a recursive one). So apart from what is necessary to hold the initial list of items to be sorted, it needs no additional memory space to work</li>
+                <li>Simplicity: It is simpler to understand than other equally efficient sorting algorithms because it does not use advanced computer science concepts such as recursion.</li>
+            </ul>
+        </section>
+    
+        <section class="info-section" id="disadvantages">
+            <h2>Disadvantages of Selection Sort</h2>
+            <ul>
+                <li>Costly: Heap sort is costly as the constants are higher compared to merge sort even if the time complexity is O(n Log n) for both.</li>
+                <li>Unstable: Heap sort is unstable. It might rearrange the relative order.</li>
+                <li>Inefficient: Heap Sort is not very efficient because of the high constants in the time complexity.</li>
+            </ul>
+        </section>
+    
+        <section id="video">
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/2DmK_H7IdTo?si=udqrmRrsvQAzcSk5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+    </main>
+    
+
+
+<!-- Sidebar (Left side) -->
+<div id="sidebar" class="sidebar">
+       
+      
+        <div class="sidebar-content">
+          <ul class="sidebar-nav">
+                <li class="menu-item"><a href="#overview">Overview</a></li>
+                <li class="menu-item"><a href="#code"> Code</a></li>
+                <li class="menu-item"><a href="#complexity-analysis">Complexity Analysis</a></li>
+                <li class="menu-item"><a href="#imp">Important concepts</a></li>
+                <li class="menu-item"><a href="#advantages">Advantages</a></li>
+                <li class="menu-item"><a href="#disadvantages">Disadvantages</a></li>
+                
+                <li><a href="#video">Learn</a></li>
+                <li class="menu-item"><a href="vheap.html">Visualization</a></li>
+            <hr>
+            <li><b>Learn More
+                <li><a href="selection.html">Selection Sort</a></li>
+                <li><a href="heap.html">Heap Sort</a></li>
+            </li>
+          </ul>
+        </div>
+      <hr>
+        <!-- Social Media and College Logos at the bottom -->
+        <div class="sidebar-logos">
+            <hr>
+          <a href="#" class="logo-link">
+            <img src="images/instagram-logo.png" alt="Instagram" class="logo-img">
+          </a>
+          <a href="#" class="logo-link">
+            <img src="images/youtube-logo.png" alt="YouTube" class="logo-img">
+          </a>
+          <a href="#" class="logo-link">
+            <img src="images/college-logo.png" alt="College" class="logo-img">
+          </a>
+        </div>
+      </div>
+      
+  
+
+
+    <footer>
+        <p>&copy; 2024 FERGUSSON EDUCATION SOCIETY</p>
+    </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script/script.js"></script>
+</body>
+</html>

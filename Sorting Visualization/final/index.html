@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduSite</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header>
+    <!-- Navbar - Fixed to top with shadow -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-navbar">
+      <div class="container-fluid d-flex justify-content-between align-items-center">
+        <!-- Center the logo using flex -->
+        <div class="navbar-brand mx-auto">
+          <a href="index.html" ><img src="images/logo.png" alt="EduSite Logo" class="logo"></a>
+        </div>
+
+        <!-- Navbar items aligned to the right -->
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ms-auto">
+                <li><a href="index.html" class="home">Home</a></li>
+                <li><a href="#" class="about" data-bs-toggle="modal" data-bs-target="#aboutModal">About</a></li>
+
+            <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="sortingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Visualization
+                    </a>
+                <ul class="dropdown-menu" aria-labelledby="sortingDropdown">
+                    <li><a class="dropdown-item" href="vselect.html">Selection Sort</a></li>
+                    <li><a class="dropdown-item" href="vheap.html">Heap Sort</a></li>
+                </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    
+    
+  </header>
+
+<!-- Sidebar (Left side) -->
+<div id="sidebar" class="sidebar">
+       
+      
+        <div class="sidebar-content">
+          <ul class="sidebar-nav">
+            <li><a href="#intro">What is Algorhtms</a></li>
+            <li><a href="#impconcept">Some Concepts</a></li>
+            <li><a href="#types-of-algorithms">Algorithm Types</a></li>
+            <li><a href="#video">Learn</a></li>
+            <hr>
+            <li><b>Learn More
+                <li><a href="selection.html">Selection Sort</a></li>
+                <li><a href="heap.html">Heap Sort</a></li>
+            </li>
+          </ul>
+        </div>
+      <hr>
+        <!-- Social Media and College Logos at the bottom -->
+        <div class="sidebar-logos">
+            <hr>
+          <a href="#" class="logo-link">
+            <img src="images/instagram-logo.png" alt="Instagram" class="logo-img">
+          </a>
+          <a href="#" class="logo-link">
+            <img src="images/youtube-logo.png" alt="YouTube" class="logo-img">
+          </a>
+          <a href="#" class="logo-link">
+            <img src="images/college-logo.png" alt="College" class="logo-img">
+          </a>
+        </div>
+      </div>
+      
+  
+  <main class="content">
+      <!-- About Modal -->
+<div class="modal fade" id="aboutModal" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="aboutModalLabel">About EduSite</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>
+                <strong>ALPHA</strong> is a platform dedicated to simplifying complex concepts in algorithms and data structures through visualization. 
+                Our mission is to make learning intuitive and engaging, especially for students and educators.
+              </p>
+              <p>
+                With a focus on user-friendly design and interactive elements, <strong>ALPHA</strong> ensures that fundamental topics are accessible to everyone.
+              </p>
+              <p>
+                   Devloped by :
+                   <ul>
+                       <li>Gawali Om R</li>
+                       <li>Tile Harshad </li>
+                   </ul>
+            </p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+        <section class="info-section" id="intro">
+            <h2>Understanding Algorithms</h2>
+            <p>
+                <strong>Algorithm:</strong> An algorithm is a step-by-step procedure for solving a problem or accomplishing a task. In the context of data structures and algorithms, it is a set of well-defined instructions for performing a specific computational task. Algorithms are fundamental to computer science and play a very important role in designing efficient solutions for various problems. Understanding algorithms is essential for anyone interested in mastering data structures and algorithms.
+            
+            </p>
+
+            <h3>What is an Algorithm?</h3>
+            <p>
+                An algorithm is a finite sequence of well-defined instructions that can be used to solve a computational problem. It provides a step-by-step procedure that converts an input into a desired output.
+            </p>
+            <img class="image" src="images/algo.jpg" alt="what is algorithm">
+            <p>
+                Algorithms typically follow a logical structure:
+                <ul>
+                    <li><strong>Input:</strong> The algorithm receives input data.</li>
+                    <li><strong>Processing:</strong> The algorithm performs a series of operations on the input data.</li>
+                    <li><strong>Output:</strong> The algorithm produces the desired output.</li>
+                </ul>
+            </p>
+
+            <h3>What is the Need for Algorithms?</h3>
+            <p>
+                Algorithms are essential for solving complex computational problems efficiently and effectively. They provide a systematic approach to:
+                <ul>
+                    <li><strong>Solving problems:</strong> Algorithms break down problems into smaller, manageable steps.</li>
+                    <li><strong>Optimizing solutions:</strong> Algorithms find the best or near-optimal solutions to problems.</li>
+                    <li><strong>Automating tasks:</strong> Algorithms can automate repetitive or complex tasks, saving time and effort.</li>
+                </ul>
+            </p>
+        </section>
+
+        <section class="algorithm-types" id="impconcept">
+            <h2>Some Important Concepts</h2>
+            <ol>
+                <li>
+                    <strong>Analysis of Algorithms:</strong> 
+                    The process of evaluating the efficiency of algorithms, focusing mainly on the time and space complexity. This helps in evaluating how the algorithm's running time or space requirements grow as the size of input increases.
+                </li>
+                <li>
+                    <strong>Mathematical Algorithms:</strong> 
+                    Used for analyzing and optimizing data structures and algorithms. Knowing basic concepts like divisibility, LCM, GCD, etc., can really help you understand how data structures work and improve your ability to design efficient algorithms.
+                </li>
+                <li>
+                    <strong>Bitwise Algorithms:</strong> 
+                    Operate on individual bits of numbers. These algorithms manipulate the binary representation of numbers like shifting bits, setting or clearing specific bits of a number, and performing bitwise operations (AND, OR, XOR). Bitwise algorithms are commonly used in low-level programming, cryptography, and optimization tasks where efficient manipulation of individual bits is required.
+                </li>
+                <li>
+                    <strong>Searching Algorithms:</strong> 
+                    Used to find a specific element or item in a collection of data. These algorithms are widely used to retrieve data efficiently from large datasets.
+                </li>
+                <li>
+                    <strong>Sorting Algorithms:</strong> 
+                    Used to arrange the elements of a list in a specific order, such as numerical or alphabetical. It organizes the items in a systematic way, making it easier to search for and access specific elements.
+                </li>
+                <li>
+                    <strong>Recursion:</strong> 
+                    A programming technique where a function calls itself within its own definition. It is usually used to solve problems that can be broken down into smaller instances of the same problem.
+                </li>
+                <li>
+                    <strong>Backtracking Algorithm:</strong> 
+                    Derived from the Recursion algorithm, with the option to revert if a recursive solution fails. It tries out all the possible solutions and finds the correct one.
+                </li>
+                <li>
+                    <strong>Divide and Conquer Algorithm:</strong> 
+                    Follows a recursive strategy to solve problems by dividing them into smaller subproblems, solving those subproblems, and combining the solutions to obtain the final solution.
+                </li>
+                <li>
+                    <strong>Greedy Algorithm:</strong> 
+                    Builds up the solution one piece at a time and chooses the next piece which gives the most obvious and immediate benefit, i.e., the most optimal choice at that moment. Problems where choosing locally optimal also leads to the global solution are best fit for Greedy algorithms.
+                </li>
+                <li>
+                    <strong>Dynamic Programming:</strong> 
+                    A method used to solve complex problems by breaking them down into simpler subproblems. By solving each subproblem only once and storing the results, it avoids redundant computations, leading to more efficient solutions for a wide range of problems.
+                </li>
+                <li>
+                    <strong>Branch and Bound Algorithm:</strong> 
+                    A method used in combinatorial optimization problems to systematically search for the best solution. It works by dividing the problem into smaller subproblems, or branches, and then eliminating certain branches based on bounds on the optimal solution. This process continues until the best solution is found or all branches have been explored.
+                </li>
+            </ol>
+            <section class="algorithm-types" id="types-of-algorithms">
+                   
+            <h2>Algorithm Types</h2>
+            <ol>
+                <li>
+                        <a href="#" class="selection.html"><strong>Selection Sort</strong> </a>
+                
+                </li>
+                <li>
+                        <a href="#" class="heap.html"> <strong>Heap Sort</strong> </a>
+             
+                </li>
+                <li>
+                    <strong>Bubble Sort</strong> 
+             
+                </li>
+                <li>
+                    <strong>Insertion Sort</strong> 
+              
+                </li>
+                <li>
+                    <strong>Quick Sort</strong> 
+              
+                </li>
+                <li>
+                    <strong>Counting Sort</strong> 
+               
+                </li>
+                <li>
+                    <strong>Radix Sort</strong> 
+                
+                </li>
+                <li>
+                    <strong>Bucket Sort</strong> 
+              
+                </li> 
+            </ol>
+                       
+        </section>
+        <section id="video">
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/cuhLSGGV-1k?si=9gufPlxpQh3xl2se" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </section>
+            
+            
+    </main>
+
+    <footer>
+        <p>&copy; 2024 FERGUSSON EDUCATION SOCIETY</p>
+    </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script/script.js"></script>
+</body>
+</html>
